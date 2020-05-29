@@ -10,8 +10,10 @@
   </div>
 
   <div class="form-group">
-    <%= f.check_box :completed, class: 'form-control' %>
+  <% if task.persisted  %>
     <%= f.label :completed %>
+    <%= f.text_field :completed, class: 'form-control' %>
+    <% end %>
   </div>
 
   <%= f.submit class: 'btn btn-primary' %>
